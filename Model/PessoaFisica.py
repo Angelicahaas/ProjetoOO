@@ -1,7 +1,6 @@
-from Usuario import Usuario 
+from Usuario import usuario 
 
-
-class PessoaFisica(Usuario):
+class pessoafisica(usuario):
 
     def __init__(self, nome: str, endereco: str, telefone: int, senha: str,
     cpf: str, saldo: int, historico: int, pagamento: int):
