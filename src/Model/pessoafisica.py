@@ -2,13 +2,13 @@ from usuario import Usuario
 
 class PessoaFisica(Usuario):
 
-    def __init__(self, nome: str, endereco: str, telefone: int, senha: str,
-    cpf: str, saldo: int, historico: int, pagamento: int):
+    def __init__(self, nome, endereco, telefone, senha,
+    cpf, saldo, historico, pagamento):
      super().__init__(nome, endereco, telefone, senha)
-     self.__cpf = cpf
-     self.__saldo = saldo
-     self.__historico = historico
-     self.__pagamento = pagamento
+     self.cpf = cpf
+     self.saldo = saldo
+     self.historico = historico
+     self.pagamento = pagamento
 
     ##toString()
 
