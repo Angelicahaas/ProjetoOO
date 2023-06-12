@@ -1,1 +1,52 @@
-[]
+[
+    {
+        "_Usuario__nome": "Harleny",
+        "_Usuario__endereco": "Santa",
+        "_Usuario__teledone": 34287736,
+        "_Usuario__senha": "Leny123",
+        "_PessoaFisica__cpf": 2354528593,
+        "_PessoaFisica__saldo": 20,
+        "_PessoaFisica__historico": 10,
+        "_PessoaFisica__pagamento": 10
+    },
+    {
+        "_Usuario__nome": "BomelGama",
+        "_Usuario__endereco": 89567834,
+        "_Usuario__teledone": "190903kjn",
+        "_Usuario__senha": 76590980,
+        "_PessoaJuridica__cnpj": 1000,
+        "_PessoaJuridica__saldo": 0,
+        "_PessoaJuridica__historico": 8909,
+        "_PessoaJuridica__pagamento": 999
+    },
+    {
+        "_Usuario__nome": "Jo\u00e3o",
+        "_Usuario__endereco": "Mato",
+        "_Usuario__teledone": 9896763452,
+        "_Usuario__senha": "4321",
+        "_PessoaFisica__cpf": 233423,
+        "_PessoaFisica__saldo": 20009,
+        "_PessoaFisica__historico": 377,
+        "_PessoaFisica__pagamento": 987
+    },
+    {
+        "_Usuario__nome": "Gabi",
+        "_Usuario__endereco": "CudoMUndo",
+        "_Usuario__teledone": 8765474839,
+        "_Usuario__senha": "5678",
+        "_PessoaFisica__cpf": 777483,
+        "_PessoaFisica__saldo": 87665,
+        "_PessoaFisica__historico": 7748,
+        "_PessoaFisica__pagamento": 87666
+    },
+    {
+        "_Usuario__nome": "Milton",
+        "_Usuario__endereco": "Seila",
+        "_Usuario__teledone": 877655445,
+        "_Usuario__senha": "9876",
+        "_PessoaFisica__cpf": 348934,
+        "_PessoaFisica__saldo": 787346,
+        "_PessoaFisica__historico": 34345,
+        "_PessoaFisica__pagamento": 9883
+    }
+]

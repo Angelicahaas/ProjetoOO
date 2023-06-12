@@ -1,16 +1,12 @@
-from Usuario import usuario 
+from usuario import Usuario 
 
-class pessoafisica(usuario):
+class Gerente(Usuario):
 
     def __init__(self, nome: str, endereco: str, telefone: int, senha: str,
-    cpf: str, saldo: int, historico: int, pagamento: int):
+    cpf: str):
      super().__init__(nome, endereco, telefone, senha)
      self.__cpf = cpf
-     self.__saldo = saldo
-     self.__historico = historico
-     self.__pagamento = pagamento
 
-    ##toString()
 
     def get_nome(self) -> str:
        return self.__nome
@@ -41,21 +37,3 @@ class pessoafisica(usuario):
     
     def set_cpf(self, cpf: str):
        self.cpf = cpf
-
-    def get_saldo(self) -> int:
-       return self.__saldo
-    
-    def set_saldo(self, saldo: int):
-       self.saldo = saldo
-
-    def get_historico(self) -> int:
-       return self.__historico
-    
-    def set_historico(self, historico: int):
-       self.historico = historico
-
-    def get_pagamento(self) -> int:
-       return self.__pagamento
-    
-    def set_pagamento(self, pagamento: int):
-       self.pagamento = pagamento
