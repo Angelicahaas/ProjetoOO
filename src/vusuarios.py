@@ -4,8 +4,6 @@ from Model.gerente import Gerente
 import json
 
 
-
-
 usuario1 = PessoaFisica("Harleny", "Santa", 34287736, "Leny123", 2354528593, 20, 10, 10)
 converterUsuario1 = vars(usuario1)
 usuario2 = PessoaJuridica("Bomel" "Gama", 89567834, "190903kjn", 76590980, 1000, 0000, 8909, 999)
