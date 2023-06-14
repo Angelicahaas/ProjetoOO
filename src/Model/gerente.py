@@ -2,10 +2,10 @@ from usuario import Usuario
 
 class Gerente(Usuario):
 
-    def __init__(self, nome: str, endereco: str, telefone: int, senha: str,
-    cpf: str):
+    def __init__(self, nome, endereco, telefone, senha,
+    cpf):
      super().__init__(nome, endereco, telefone, senha)
-     self.__cpf = cpf
+     self.cpf = cpf
 
 
     def get_nome(self) -> str:
