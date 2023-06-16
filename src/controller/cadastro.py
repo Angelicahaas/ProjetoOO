@@ -1,9 +1,7 @@
-from pessoafisica import PessoaFisica
-from pessoajuridica import PessoaJuridica
-from gerente import Gerente
+from ..Model.usuario import PessoaFisica, PessoaJuridica
 import json
 
-class Cadastro:
+class Cadastro():
 
     def __init__(self, clientes, usuarios):
         self.clientes = []
@@ -26,7 +24,7 @@ class Cadastro:
                         cliente['cpf'],
                         cliente['saldo']
                     )
-                    cliente_f_objeto.saldo = PessoaFisica['saldo']
+                    cliente_f_objeto.saldo = cliente['saldo']
                     self.clientes.append(cliente_f_objeto)
 
                 print(f"Dados dos clientes carregados do arquivo com sucesso!.")
@@ -103,7 +101,7 @@ class Cadastro:
                         cliente['telefone'],
                         cliente['cnpj']
                     )
-                    cliente_j_objeto.saldo = PessoaJuridica['saldo']
+                    cliente_j_objeto.saldo = cliente['saldo']
                     self.clientes.append(cliente_j_objeto)
                 print(f"Dados da Empresa carregados do arquivo com sucesso!.")
             
@@ -112,29 +110,29 @@ class Cadastro:
                 print(f"O arquivo não existe. Será criado umm novo arquivo.")
 
 
-    def salvar_dados_juridica(self):
-         dados_juridico = []
-         for cliente in self.clientes:
-              dados_juridico.append({
-                   'nome': PessoaJuridica.get_nome,
-                   'endereco': PessoaJuridica.get_endereco,
-                   'telefone': PessoaJuridica.get_telefone,
-                   'senha': PessoaJuridica.get_senha,
-                   'cnpj': PessoaJuridica.get_cnpj,
-                   'saldo': PessoaJuridica.get_saldo
+    def salvar_dados_fisica(self):
 
-              })
+        dados_fisicos = []
 
-    
-         with open("BancodeDados//usuarios.json", "w") as arq_cliente:
-              json.demp(dados_juridico, arq_cliente, indent=4)
+        for cliente in self.clientes:
+            dados_fisicos.append({
+                'nome': cliente.get_nome(),
+                'endereco': cliente.get_endereco(),
+                'telefone': cliente.get_telefone(),
+               'senha': cliente.get_senha(),
+                'cpf': cliente.get_cpf(),
+              'saldo': cliente.get_saldo()
+        })
+            
 
-         print(f"Dados salvos no arquivo com sucesso!")
-    
+    with open("BancodeDados//usuarios.json", "w") as arq_cliente:
+        json.dump([], arq_cliente, indent=4)
+    print("Dados salvos no arquivo com sucesso!")
+
 
     def adicionar_cliente_juridico(self, nome, endereco, telefone, senha, cnpj, saldo):
          cliente_juridico = PessoaJuridica(nome, endereco,telefone, senha, cnpj, saldo)
-         self.cliente.append(cliente_juridico)
+         self.clientes.append(cliente_juridico)
          
          print(f"Empresa {nome} adicionado com sucesso!")
 
@@ -157,7 +155,7 @@ class Cadastro:
 
     def adicionar_cliente_juridico(self, nome, endereco, telefone, senha, cnpj, saldo):
         cliente_juridico = PessoaJuridica(nome, endereco, telefone, senha, cnpj, saldo)
-        self.cliente.append(cliente_juridico)
+        self.clientes.append(cliente_juridico)
 
         print(print(f"Nome: {PessoaJuridica.get_nome}, Endereco: {PessoaJuridica.get_endereco},Telefone: {PessoaJuridica.get_telefone}, Senha: {PessoaJuridica.get_senha}, e CPF: {PessoaJuridica.get_cnpj}"))
 
@@ -187,5 +185,7 @@ class CadastroGerente:
             json.dump(self.gerentes, arq_gerente, indent=4)
 
         print(f"Dados do gerente salvos no arquivo {self.usergerente} com sucesso!")
+
+
 
 
